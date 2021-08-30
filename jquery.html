@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--TAG SCRIPT-->
+    <script src="index.js"></script>
+    <!--ESTILOS-->
+    <style rel="stylesheet">
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .container h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            color: lightslategray;
+        }
+        
+        .container button {
+            background-color: lightslategray;
+            color: white;
+            line-height: 30px;
+            border-radius: 8px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 id="text">Clicked 0 times</h1>
+            <button>Click Me</button>
+        </div>
+    </div>
+
+    <!--IMPORTANDO O JQUERY-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js "></script>
+    <script>
+        $(document).ready(
+            function() {
+                var counter = 0;
+
+                //BUSCANDO OS ELEMENTOS
+                var $text = $("#text ")
+                var $button = $(".container button ")
+
+                //APLICANDO AÇÕES
+                $button.click(function() {
+                    counter += 1;
+                    $text.text("Clicked " + counter + " times")
+                })
+
+            }
+        )
+    </script>
+</body>
+
+</html>
