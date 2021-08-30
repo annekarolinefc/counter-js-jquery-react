@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>React</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--TAG SCRIPT-->
+    <script src="index.js"></script>
+    <!--ESTILOS-->
+    <style rel="stylesheet">
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .container h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            color: lightslategray;
+        }
+        
+        .container button {
+            background-color: lightslategray;
+            color: white;
+            line-height: 30px;
+            border-radius: 8px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="root"></div>
+
+
+    <!--IMPORTANDO A BIBLIOTECA-->
+    <script crossorigin src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+
+    <script type="text/babel">
+        const App = () => { const [counter, setCounter] = React.useState(0); const handleClick = () =>{setCounter(counter + 1) }; return (
+        <div class="container">
+            <div class="content">
+                <h1> Clicked {{counter}} times
+                </h1>
+                <button onClick={handleClick}> Click Me
+                    </button>
+                </ div>
+            </div>
+            ) }; ReactDOM.render(
+            <App /> , document.getElementById('root'))
+    </script>
+
+</body>
+
+</html>
